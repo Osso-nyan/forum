@@ -12,12 +12,12 @@
 			<th></th>
 		</tr>
 
-		<tr th:object="${editContent}">
-			<form th:action="@{/update/{id}(id=${editContent})}" th:object="${formModel}" th:method="put">
-				<td><input type="text" name="content" th:value="${formModel.content}" size="20" maxlength="200" /></td>
-				<td><input type="submit" value="更新"></td>
-			</form>
-		</tr>
+		<form th:action="@{/update/{id}(id=${formModel.id})}" th:object="${formModel}" th:method="put">
+			<tr>
+					<td><input type="text" name="content" th:value="${formModel.content}" size="20" maxlength="200" /></td>
+					<td><input type="submit" value="更新"></td>
+			</tr>
+		</form>
 
 	</table>
 	<form action="/">
