@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link th:href="@{/css/table.css}" rel="stylesheet">
 <title>新規投稿画面</title>
 </head>
 <body>
@@ -9,10 +10,10 @@
 		<table border="1">
 			<tr>
 				<th>投稿内容</th>
-				<td><input type="text" name="content"th:value="*{content}" size="20" maxlength="200" /></td>
+				<td><input type="text" name="content"th:value="*{content}" size="150" maxlength="70" /></td>
+				<td><input type="submit" value="投稿" /></td>
 			</tr>
 		</table>
-		<input type="submit" value="投稿" />
 	</form>
 	<form action="/">
 		<input type="submit" value="戻る" />

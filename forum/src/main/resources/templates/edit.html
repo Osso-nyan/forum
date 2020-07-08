@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="css/styles.css">
+<link th:href="@{/css/table.css}" rel="stylesheet">
 <title>編集処理</title>
 </head>
 <body>
@@ -14,14 +14,14 @@
 
 		<form th:action="@{/update/{id}(id=${formModel.id})}" th:object="${formModel}" th:method="put">
 			<tr>
-				<td><input type="text" name="content" th:value="${formModel.content}" size="20" maxlength="200" /></td>
+				<td><input type="text" name="content" th:value="${formModel.content}" size="150" maxlength="70" /></td>
 				<td><input type="submit" value="更新"></td>
 			</tr>
 		</form>
 
 	</table>
 	<form action="/">
-		<input type="submit" value="戻る" />
+		<input type="submit" value="戻る" style="position: absolute; right: 5%; top: 35%"/>
 	</form>
 </body>
 </html>
