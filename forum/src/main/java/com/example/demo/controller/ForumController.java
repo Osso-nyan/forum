@@ -59,7 +59,7 @@ public class ForumController {
 	public ModelAndView editContent(@PathVariable Integer id) {
 		ModelAndView mav = new ModelAndView();
 		Report report = reportService.editReport(id); // 編集する投稿を取得
-		mav.addObject("editContent", report); // TODO idをセットする為に使っているので修正した方がいい
+		mav.addObject("editContent", id); // idをセット
 		mav.addObject("formModel", report); // 編集する投稿をセット
 		mav.setViewName("/edit"); // 画面遷移先を指定
 		return mav;
