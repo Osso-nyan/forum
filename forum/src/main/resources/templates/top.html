@@ -9,9 +9,8 @@
 	<h1>minimum掲示板</h1>
     <h5>※この掲示板はつぶやくことのみを目的とした匿名の掲示板です。</h5>
     <h3>新規投稿はこちらから↓</h3>
-	<form action="/new">
-		<input type="submit" value="新規投稿" style="position: absolute; left: 10%"/>
-	</form>
+
+	<a href="/new"><button type="button">新規投稿</button></a>
 
 	<table border="1">
 		<tr>
@@ -25,9 +24,7 @@
 			<td th:text="${content.id}">
 			<td th:text="${content.content}">
 			<td>
-				<form th:action="@{/edit/{id}(id=${content.id})}">
-					<input type="submit" value="編集">
-				</form>
+				<a th:href="@{/edit/{id}(id=${content.id})}"><button type="button">編集</button></a>
 			</td>
 			<td>
 				<form th:action="@{/delete/{id}(id=${content.id})}" th:method="delete">
